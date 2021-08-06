@@ -1,0 +1,78 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+  <h1 class="text-center mt-2 mb-5">New Campground</h1>
+  <div class="col-6 offset-3">
+    <form
+      class="needs-validation"
+      action="/campgrounds"
+      method="POST"
+      novalidate
+    >
+      <div class="mb-3">
+        <label class="form-label" for="name">Enter Campground Name: </label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[name]"
+          id="name"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Enter Location: </label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[location]"
+          id="location"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="image">Enter Image URL: </label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[image]"
+          id="image"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Enter Description: </label>
+        <textarea
+          class="form-control"
+          type="text"
+          name="campground[description]"
+          id="description"
+          required
+        ></textarea>
+        <div class="valid-feedback">Looks good!</div>
+        <div class="mb-3">
+          <label class="form-label" for="price">Enter Price: </label>
+          <div class="input-group">
+            <span class="input-group-text" id="price-label">$</span>
+            <input
+              class="form-control"
+              type="text"
+              name="campground[price]"
+              id="price"
+              aria-describedby="price-label"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success py-1" type="submit">
+          Add Campground
+        </button>
+        <a class="btn btn-danger py-1" href="/campgrounds">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
